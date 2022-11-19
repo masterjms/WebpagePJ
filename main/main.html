@@ -1,0 +1,296 @@
+<!--https://www.foolishdeveloper.com/2021/06/sidebar-menu-using-html-css-javascript.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minsung</title>
+    <link href="styles.css"/>
+
+    <style>
+      .wrapper .sidebar{
+      background: rgb(5, 68, 104);
+      position: fixed;
+      top: 0;
+      right: 0; /*dd*/
+      width: 225px;
+      height: 100%;
+      padding: 20px 0;
+      transition: all 0.5s ease;
+      }
+      .wrapper .sidebar .profile{
+      margin-bottom: 30px;
+      text-align: center;
+      }
+      .wrapper .sidebar .profile img{
+      display: block;
+      width: 100px;
+      height: 100px;
+        border-radius: 50%;
+      margin: 0 auto;
+      }
+      .wrapper .sidebar .profile h3{
+      color: #ffffff;
+      margin: 10px 0 5px;
+      }
+      .wrapper .sidebar .profile p{
+      color: rgb(206, 240, 253);
+      font-size: 14px;
+      }
+      .wrapper .sidebar ul li a{
+      display: block;
+      padding: 13px 30px;
+      border-bottom: 1px solid #10558d;
+      color: rgb(241, 237, 237);
+      font-size: 16px;
+      position: relative;
+      text-decoration-line: none;
+      }
+      .wrapper .sidebar ul li a .icon{
+      color: #dee4ec;
+      width: 30px;
+      display: inline-block;
+      }
+      .wrapper .sidebar ul li a:hover,
+      .wrapper .sidebar ul li a.active{
+        color: #0c7db1;
+        background:white;
+          border-right: 2px solid rgb(5, 68, 104);
+      }
+      .wrapper .sidebar ul li a:hover .icon,
+      .wrapper .sidebar ul li a.active .icon{
+        color: #0c7db1;
+      }
+      .wrapper .sidebar ul li a:hover:before,
+      .wrapper .sidebar ul li a.active:before{
+        display: block;
+      }
+      /* 상단 배너의 구역의 변화량 */
+      .wrapper .section{
+      width: calc(100% - 225px);
+      margin-right: 225px;
+      transition: all 0.5s ease;
+      }
+      .wrapper .section .top_navbar{
+      background: rgb(7, 105, 185);
+      height: 50px;
+      display: flex;
+      align-items: center;
+      padding: 0 30px;
+    
+      }
+      .wrapper .section .top_navbar .hamburger a{
+      font-size: 28px;
+      color: #f4fbff;
+      }
+      .wrapper .section .top_navbar .hamburger a:hover{
+      color: #a2ecff;
+      }
+      /* 클릭시 사이드 배너가 오른쪽으로 들어감 */
+      body.active .wrapper .sidebar{
+	    right: -225px; 
+      }
+      /* 상단배너가 클릭시 오른쪽으로 마진이 0이 되도록 이동함 */
+      body.active .wrapper .section{ 
+    	margin-right: 0;
+    	width: 100%;
+      }
+
+    /* main */
+      body {
+        margin: 0;
+      }
+      .nav {
+        height: 70px;
+        border-bottom: 1px solid black;
+        display: flex;
+        align-items: center;
+      }
+      
+      .nav-right-items {
+        display: flex;
+        margin-left: auto;
+      }
+
+      .nav-item{
+        margin-left: 10px;
+      }
+
+      .company-name{
+        margin-left: 20px;
+      }
+
+      .title{
+        text-align: center;
+        font-size: 3.5rem;
+        font-weight: bold;
+      }
+
+      .subtitle {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 1.25rem;
+        font-weght: 300;
+      }
+
+      .main {
+        width: 1000px;
+        margin: 0 auto;
+        margin-top: 60px;
+      }
+
+      .prices{
+        margin-top: 50px;
+        display: flex;
+      }
+
+      .price-item {
+        width: 300px;
+        height: 350px;
+        border: 1px solid black;
+        margin: 20px;
+        border-radius: 4px;
+        text-align: center;
+      }
+
+      .price-item-title {
+        font-size: 1.5rem;
+        background: rgba(0,0,0,.03);
+        text-ailgn: center;
+        height: 53px;
+        line-height: 53px;
+        border-bottom: 1px solid black;
+      }
+
+      .price-item-price {
+        font-size: 2.5rem;
+        font-weight: bold;
+        padding: 20px;
+      }
+
+      .price-item-button {
+        margin-top: 70px;
+        padding: .5rem 1rem;
+        font-size: 1.25rem;
+        line-hight: 1.5;
+        border-radius: .3rem;
+        color: #007bff;
+        background-color: transparent;
+        background-image: none;
+        border-color: #007bff;
+      }
+
+      .price-item-button--active {
+        background-color: #007bff;
+        color: white;
+      }
+     
+    </style>
+    
+
+</head>
+<body>
+    <div class="wrapper">
+     <!--Top Menu & Menu button-->
+        <div class="sidebar">
+
+
+            <!-- close btn -->
+            <!-- <div class = "section">
+                <div class = "hamburger">
+                <a href="#">
+                    <i class = "fas fa-bars"></i>
+                </a>   
+                </div>
+            </div> -->
+
+
+
+            <div class="profile">
+                <img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FuqJpZ%2FbtqyenBIIXx%2Fmh1Cc5F023UGpfQTFBdqV0%2Fimg.jpg" alt="profile_picture">
+                <!--Profile Title & Descruption-->
+                <h3>Jang Min Sung</h3>
+                <p>Developer</p>
+            </div>
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        <span class="item">My Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user-friends"></i></span>
+                        <span class="item">People</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                        <span class="item">Perfomance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-database"></i></span>
+                        <span class="item">Development</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="item">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user-shield"></i></span>
+                        <span class="item">Admin</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-cog"></i></span>
+                        <span class="item">Settings</span>
+                    </a>
+                </li>
+              </ul>
+       </div>
+       <div class="section">
+          <div class="top_navbar">
+              <div class="hamburger">
+                  <a href="#">
+                      <i class="fas fa-bars"></i>
+                  </a>
+              </div>
+          </div>  
+      </div>
+    </div>
+
+    <!-- main -->
+    <div class = "nev">
+        <div class = "company-name">
+            MINSUNG-TECH
+        </div>
+    </div>
+    
+  <script src = "app.js"></script>
+</body>
+
+
+
+
+</html>
