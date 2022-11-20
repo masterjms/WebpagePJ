@@ -5,6 +5,9 @@ Fonts
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 
+/* google font style */
+*{font-family: 'Gowun Dodum', sans-serif;}
+
 /*
 =============== 
 Variables
@@ -303,6 +306,7 @@ body {
 
   .company-name{
     margin-left: 20px;
+    color: var(--clr-primary-2);
   }
 
   .title{
