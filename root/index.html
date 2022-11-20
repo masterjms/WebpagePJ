@@ -3,19 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>MinSung</title>
-    <!-- font-awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <!-- font awesome cdn -->
     <script src="https://kit.fontawesome.com/f4e726081a.js" crossorigin="anonymous"></script>
 
     <!-- styles -->
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
 
+  <body>
     <!-- main -->
     <div class = "nav">
             <div class = "company-name">
@@ -33,19 +35,16 @@
                 <div class="prices">
                   <div class="price-item">
                     <div class="price-item-title">
-                      ACTIVE 1
+                      날씨
                     </div>
                     <div class="price-item-price">
-                      GitHub
+                      오늘의 날씨
                     </div>
                     <div class="price-item-detail">
-                      MINSUNG's GitHub Site
+                      오늘의 날씨
                     </div>
                     <div class="price-item-detail">
-                      C, JAVA, HTML, APP code         </div>
-                    <button class="price-item-button">
-                      <a href="#">Click me</a>
-                    </button>
+                        <button onclick = "getWeather()">날씨가져오기</button>   
                   </div>
                 </div>
               </div>
