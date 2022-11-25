@@ -44,7 +44,17 @@
                       오늘의 날씨
                     </div>
                     <div class="price-item-detail">
-                        <button onclick = "getWeather()">날씨가져오기</button>   
+                        <button onclick = "getWeather()">날씨가져오기</button> 
+                        <p id = "temperature"></p>
+                        <script>
+                            function getWeather(){
+                                fetch('https://apis.data.go.kr/1360000/BeachInfoservice/getUltraSrtFcstBeach?serviceKey=oDAI%2F%2Fa8duCkiP03euQtJQjOvpNerRjgufXoXKBcQiqnhdKg4tPDu2yAY%2BuJ0ayfmdnF0sM1rr60VBJBawsJTg%3D%3D&numOfRows=1&pageNo=1&dataType=JSON&base_date=20221125&base_time=1500&beach_num=1')
+                                .then((response) => response.json())
+                                .then((data) => {
+                                    document.getElementById("temperature").innerHTML = data['temperature'];
+                                });
+                            }
+                        </script>  
                   </div>
                 </div>
               </div>
