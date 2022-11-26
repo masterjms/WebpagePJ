@@ -25,6 +25,8 @@ const months = [
   const deadline = document.querySelector('.deadline');
   const items = document.querySelectorAll('.deadline-format h4');
   
+  // https://dororongju.tistory.com/116 << 읽어볼것
+
   let tempDate = new Date();
   let tempYear = tempDate.getFullYear();
   let tempMonth = tempDate.getMonth();
