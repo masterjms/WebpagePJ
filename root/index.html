@@ -15,49 +15,112 @@
 
     <!-- styles -->
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- JAVASCRIPT seperation -->
+    <script src = "emailAJAX.js"></script>
+    <script src="app.js"></script>
+    <script src = "timer.js"></script>
   </head>
 
   <body>
     <!-- main -->
     <div class = "nav">
-            <div class = "company-name">
+        <div class = "company-name">
                 MINSUNG-TECH
-            </div>
         </div>
-
+    </div>
         <div class="main">
-                <div class="title">
-                  THE CRAETIVE WORLD
+            <div class="title">
+                THE CRAETIVE WORLD
+            </div>
+            <div class="subtitle">
+                we challenge the limit and overcome the problems.
+            </div>
+
+    <!-- first price : email service -->
+
+            <div class="prices">
+                <div class="price-item">
+                <div class="price-item-title">
+                    Opinion to Developer
                 </div>
-                <div class="subtitle">
-                  we challenge the limit and overcome the problems.
+                <div class="price-item-price">
+                        What you want?
                 </div>
-                <div class="prices">
-                  <div class="price-item">
-                    <div class="price-item-title">
-                      날씨
-                    </div>
-                    <div class="price-item-price">
-                      오늘의 날씨
-                    </div>
-                    <div class="price-item-detail">
-                      오늘의 날씨
-                    </div>
-                    <div class="price-item-detail">
-                        <button onclick = "getWeather()">날씨가져오기</button> 
-                        <p id = "temperature"></p>
-                        <script>
-                            function getWeather(){
-                                fetch('https://apis.data.go.kr/1360000/BeachInfoservice/getUltraSrtFcstBeach?serviceKey=oDAI%2F%2Fa8duCkiP03euQtJQjOvpNerRjgufXoXKBcQiqnhdKg4tPDu2yAY%2BuJ0ayfmdnF0sM1rr60VBJBawsJTg%3D%3D&numOfRows=1&pageNo=1&dataType=JSON&base_date=20221125&base_time=1500&beach_num=1')
-                                .then((response) => response.json())
-                                .then((data) => {
-                                    document.getElementById("temperature").innerHTML = data['temperature'];
-                                });
-                            }
-                        </script>  
-                  </div>
+                <div class="price-item-detail">
                 </div>
-              </div>
+                <div class="price-item-detail">
+                <form id="my-form" action="https://formspree.io/f/mzbwqakz" method="POST">
+                    <label>Email:</label>
+                    <input type="email" name="email" placeholder="ex)mstoto0319@gmail.com"/>
+                    <label>Message:</label>
+                    <input type="text" name="message" />
+                    <button id="my-form-button">send</button>
+                    <p id="my-form-status"></p>
+                </form>
+                </div>
+            </div>
+                
+    <!-- second price : D-day calculator -->
+
+            <div class = "prices">
+                <div class = "price-item">
+                        <section class="section-center">
+                                <!-- image -->
+                                <article class="gift-img">
+                                  <img src="./gift.jpeg" alt="gift" />
+                                </article>
+                                <!-- info -->
+                                <article class="gift-info">
+                                  <h3>old iphone giveaway</h3>
+                                  <h4 class="giveaway">
+                                    giveaway ends on Sunday, 24 April 2020, 8:00am
+                                  </h4>
+                                  <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Reprehenderit molestiae cum libero atque ut voluptate qui consectetur
+                                    aliquid incidunt voluptatem quos, dolore, non commodi quaerat aliquam
+                                    eligendi, quisquam totam blanditiis.
+                                  </p>
+                                  <div class="deadline">
+                                    <!-- days -->
+                                    <div class="deadline-format">
+                                      <div>
+                                        <h4 class="days">34</h4>
+                                        <span>days</span>
+                                      </div>
+                                    </div>
+                                    <!-- end of days -->
+                                    <!-- days -->
+                                    <div class="deadline-format">
+                                      <div>
+                                        <h4 class="hours">34</h4>
+                                        <span>hours</span>
+                                      </div>
+                                    </div>
+                                    <!-- end of days -->
+                                    <!-- minutes -->
+                                    <div class="deadline-format">
+                                      <div>
+                                        <h4 class="minutes">34</h4>
+                                        <span>mins</span>
+                                      </div>
+                                    </div>
+                                    <!-- end of days -->
+                                    <!-- minutes -->
+                                    <div class="deadline-format">
+                                      <div>
+                                        <h4 class="seconds">34</h4>
+                                        <span>secs</span>
+                                      </div>
+                                    </div>
+                                    <!-- end of days -->
+                                  </div>
+                                </article>
+                              </section>                    
+
+                </div>
+            </div>
 
 <!-- sidebar -->
     <button class="sidebar-toggle">
