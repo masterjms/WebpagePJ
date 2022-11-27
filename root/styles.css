@@ -328,13 +328,13 @@ body {
   }
 
   .main {
-    width: 1000px;
     margin: 0 auto;
     margin-top: 60px;
   }
 
   .prices{
     margin-top: 60px;
+    width: 1000px;
     justify-content: center;
     align-items: center;
     
@@ -427,7 +427,7 @@ Countdown Timer
 ===============
 */
 .gift-img {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 .gift-info h3 {
   text-transform: uppercase;
