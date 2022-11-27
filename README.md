@@ -5,7 +5,7 @@ https://cosmic-seahorse-91ffa3.netlify.app<br>
 2. modern Grapic - more visible icons and font styles By using css.
 3. Borrow open api - use AJAX to commit the data in live.
 4. Back end - login service using back end area.<br>
-/////////////////////////
+-------------------------------------------------------<br>
 새로운 계획 (새로운 웹페이지 프로젝트 - 현재 project1 레포지토리에 존재하는 파일)<br>
 https://www.vanillajavascriptprojects.com/ <<여기보고 따올것
 추가할 것<br>
