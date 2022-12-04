@@ -6,11 +6,14 @@ https://cosmic-seahorse-91ffa3.netlify.app<br>
 3. Borrow open api - use AJAX to commit the data in live.
 4. Back end - login service using back end area.<br>
 -------------------------------------------------------<br>
-새로운 계획 (새로운 웹페이지 프로젝트 - 현재 project1 레포지토리에 존재하는 파일)<br>
-https://www.vanillajavascriptprojects.com/ <<여기보고 따올것
-추가할 것<br>
-첫번째 스크롤 : 프로필 부분<br>
-두번째 스크롤 : 타임카운트 바 (스크립트 파일을 html에 넣을것)<br>
-세번째 스크롤 : 생각해볼것 - ajax로 api 가져오기 시도?<br>
 
-먼저할것 -- 웹페이지의 전체적인 느낌 구성 
+# Project1 - version seperation (focus on otimization)
+### OverAll Architecture
+navbar : PC.ver - horizontal bar / Mobile.ver - vertical bar(button) <br>
+link-container : smooth scroll functions - move on selected sections by 'onclick' <br>
+Body<br>
+home(main) : tittle and subtitle<br>
+Sub1 (introduce section) : introduce about us, dev process explanations etc.<br>
+Sub2 (web browser skills) : by using Ajax.
+Sub3 (countDown program) : to show javascript usability.<br>
+Ending banner : @copyrights
