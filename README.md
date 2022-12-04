@@ -12,8 +12,8 @@ https://cosmic-seahorse-91ffa3.netlify.app<br>
 1-1. link-container : smooth scroll functions - move on selected sections by 'onclick' <br>
 2. Body<br>
 2-1. home(main) : tittle and subtitle<br>
-2-2.
--Sub1 (introduce section) : introduce about us, dev process explanations etc.<br>
--Sub2 (web browser skills) : by using Ajax.<br>
--Sub3 (countDown program) : to show javascript usability.<br>
+2-2.<br>
+---- Sub1 (introduce section) : introduce about us, dev process explanations etc.<br>
+---- Sub2 (web browser skills) : by using Ajax.<br>
+---- Sub3 (countDown program) : to show javascript usability.<br>
 3. Ending banner : @copyrights
