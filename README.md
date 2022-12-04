@@ -1,4 +1,5 @@
 # WebpagePJ
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white" >  <img src="https://img.shields.io/badge/JavaScript-E5E500?style=flat&logo=JavaScript&logoColor=white" >  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" ><br>
 My first own web page project<br>
 https://cosmic-seahorse-91ffa3.netlify.app<br>
 1. making sidebar - it combines log-in service and github site or my SNS address. Also It includes on and off functions.
