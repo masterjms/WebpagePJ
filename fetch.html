@@ -1,16 +1,28 @@
-<!DOCTYPE html>
 <html>
-    <body>
-        <article>
-
-        </article>
-        <input type="button" value="fetch" onclick="
-            fetch('html').then(function(response){
-                response.text().then(function(text){
-                    alert(text);
-                    document.querySelector('article').innerHTML = text;
-                })
-            })
-        ">
-    </body>
+ <head>
+  <script type="text/javascript">
+   fetch("//namu.wiki/raw/틀:틀%20모음/") // fetch API로 데이터를 요청
+    .then((response) => {
+     if (response.ok) { // HTTP Status가 성공적인 (200 등) 경우
+      return response.text(); // Response Body를 text로 꺼내옴
+     } else { // 4xx/5xx 에러로 요청 실패
+      return Promise.reject(`Error code ${response.status}`); 
+      //promise는 미래 연산에서 해결되지 않은 값을 위한 대리자임. 이 코드는 else의 경우 : '에러코드-상태 리스폰스'의 거부 응답을 returm 할 수있도록 미리 promise 약속해두는 것임
+     }
+    }).then((text) => {
+     document.getElementById("content").innerHTML = text;  // #content 태그 내의 내용을 받아온 텍스트로 교체.
+    }).catch(() => { // 네트워크 문제일 경우만 reject됨
+     console.warn('network problem');
+    });
+  </script>
+ </head>
+ <body>
+  <div id="content"></div>
+ </body>
 </html>
+<!-- promise 와 .then 과 .catch
+1. promise는 두개의 상태를 갖는다 . onFulfilled 와 onRejected.
+2. fulfilled가 되면 위의 코드가 이행되어질때, promsie의 호출값이 되며, 이행값(onFulfilled value) 하나를 인자로 받는다.
+3. onRejected가 되면 위의 코드가 거부되어질때, promise의 호출값이 되며, 거부이유(onRejected value) 하나를 인자로 받는다.
+4. 두 상태에 대하여 연결하는 어떠한 명령 코드를 적을때 .then을 사용한다.
+5. .catch의 경우는 then메서드를 두개를 연속해서 쓰지 않는 경향이 있으므로, 추가적으로 발생 할수 있는 에러에 대한 추가 명령코드를 작성할때 사용한다. -->
