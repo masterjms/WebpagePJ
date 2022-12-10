@@ -19,3 +19,4 @@ https://cosmic-seahorse-91ffa3.netlify.app<br>
 - [x] Sub3 (countDown program) : to show javascript usability.<br>
 3. Ending banner : @copyrights<br>
 * reference : https://www.vanillajavascriptprojects.com/
+* repository to push code : https://github.com/masterjms/project1.git
